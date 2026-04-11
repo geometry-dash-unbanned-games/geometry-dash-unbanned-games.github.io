@@ -701,15 +701,63 @@ input.form-control {
   overflow: hidden;
 }
 #mobile-play {
-  position: relative;
+position: relative;
 }
 #mobile-play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 100px;
-  color: #fff;
-  transform: translate(-50%, -50%);
+position: absolute;
+top: 50%;
+left: 50%;
+font-size: 100px;
+color: #fff;
+transform: translate(-50%, -50%);
+}
+
+/* Blurred background for play overlay */
+#custom-play-overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1000;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+}
+
+.play-overlay-bg {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -2;
+}
+
+.play-overlay-bg img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+filter: blur(15px);
+transform: scale(1.2);
+}
+
+.play-overlay-dark {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.4);
+z-index: -1;
+}
+
+.play-overlay-content {
+text-align: center;
+color: white;
+position: relative;
+z-index: 1;
 }
 .game-container {
   overflow: hidden;
