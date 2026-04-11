@@ -142,11 +142,27 @@ margin-top: 25px;
             <div class="col-md-9">
                 <div class="game-container">
                     <div class="game-content" data-id="scratch">
-                        <div class="game-iframe-container" id="game-player">
-                            <div id="mobile-back-button" draggable="true"><i class="bi bi-x-circle-fill"></i></div>
-                            <iframe class="game-iframe" id="game-area" src="https://lolygames.github.io/geometry-dash/"
-                                width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
-                        </div>
+<div class="game-iframe-container" id="game-player" style="position: relative;">
+<div id="mobile-back-button" draggable="true"><i class="bi bi-x-circle-fill"></i></div>
+<iframe class="game-iframe" id="game-area" src=""
+width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
+
+<div id="custom-play-overlay">
+<div class="play-overlay-bg">
+<img src="../images/geometry-dash-scratch.webp" alt="Background">
+</div>
+<div class="play-overlay-dark"></div>
+<div class="play-overlay-content">
+<img src="../images/geometry-dash-scratch.webp" alt="Geometry Dash Scratch"
+style="width: 100px; height: 100px; margin-bottom: 20px; border-radius: 20px;">
+<div id="custom-play-btn" style="font-size: 60px; cursor: pointer; color: #FCB53B;"
+onclick="customStartGame()">
+<i class="bi bi-play-circle-fill"></i>
+</div>
+<p style="margin-top: 10px; font-size: 18px;">Click to Play Geometry Dash Scratch</p>
+</div>
+</div>
+</div>
                     </div>
                     <div class="game-info">
                         <div class="header-left">
