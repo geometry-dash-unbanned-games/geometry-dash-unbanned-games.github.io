@@ -220,17 +220,36 @@
 </head>
 
 <body id="page-top">
-    <nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand js-scroll-trigger" href="/">
-                <img src="../images/home-icon.png" width="160" height="80" class="topVAZ-logo" alt="logo">
-            </a>
-            <div class="navbar-collapse collapse" id="nav-menu"></div>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-dark top-nav" id="mainNav">
+  <a class="navbar-brand js-scroll-trigger" href="/">
+    <img src="../images/home-icon.webp" width="160" height="80" class="topVAZ-logo" alt="logo">
+  </a>
+  <ul class="navbar-nav d-none d-lg-flex ms-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+      <a class="nav-link" href="/play/geometry-dash.html">Classic</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/play/geometry-dash-lite.html">Lite</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/play/geometry-dash-meltdown.html">Meltdown</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/play/geometry-dash-subzero.html">Subzero</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/play/geometry-dash-world.html">World</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/play/geometry-dash-scratch.html">Scratch</a>
+    </li>
+  </ul>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse collapse" id="nav-menu">
+  </div>
+</nav>
 
     <div class="container game-wrapper">
         <div class="row">
@@ -240,15 +259,19 @@
 <div class="game-iframe-container" id="game-player" style="position: relative;">
 <div id="mobile-back-button" draggable="true"><i class="bi bi-x-circle-fill"></i></div>
 <iframe class="game-iframe" id="game-area" src="" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen></iframe>
-<div id="custom-play-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; z-index: 1000;">
-<div style="text-align: center; color: white;">
-<img src="../images/2048.webp" alt="2048" style="width: 100px; height: 100px; margin-bottom: 20px; border-radius: 10px;">
-<div id="custom-play-btn" style="font-size: 60px; cursor: pointer; color: #FCB53B;" onclick="start2048Game()">
-<i class="bi bi-play-circle-fill"></i>
-</div>
-<p style="margin-top: 10px; font-size: 18px;">Click to Play 2048</p>
-</div>
-</div>
+<div id="custom-play-overlay">
+        <div class="play-overlay-bg">
+          <img src="../images/2048.webp" alt="Background">
+        </div>
+        <div class="play-overlay-dark"></div>
+        <div class="play-overlay-content">
+          <img src="../images/2048.webp" alt="2048" style="width: 100px; height: 100px; margin-bottom: 20px; border-radius: 20px;">
+          <div id="custom-play-btn" style="font-size: 60px; cursor: pointer; color: #FCB53B;" onclick="start2048Game()">
+            <i class="bi bi-play-circle-fill"></i>
+          </div>
+          <p style="margin-top: 10px; font-size: 18px;">Click to Play 2048</p>
+        </div>
+      </div>
 </div>
                     </div>
                     <div class="game-info">
